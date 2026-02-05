@@ -20,7 +20,9 @@
                 <button type="submit">Predict</button>
             </form>
 
-            <h2> The Predicted FWI is {{results}}</h2>
+            <div style="margin-top: 40px; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; text-align: center;">
+                <h2 style="color: white; margin: 0; font-size: 24px;">The Predicted FWI is <span style="font-weight: bold; font-size: 32px;">{{results}}</span></h2>
+            </div>
     </body>
 </head>
 <style>
@@ -38,6 +40,7 @@
         justify-content: center;
         align-items: center;
         padding: 20px;
+        flex-direction: column;
     }
     
     .container {
