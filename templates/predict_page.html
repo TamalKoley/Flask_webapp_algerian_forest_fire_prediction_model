@@ -1,0 +1,98 @@
+<!<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Prediction Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+            <form action="{{url_for('predict_data')}}" method="post"> 
+                <input type="text" name="Tempareture" placeholder="Enter Temperature" required="required"><br>
+                <input type="text" name="RH" placeholder="Enter RH" required="required"><br>
+                <input type="text" name="WS" placeholder="Enter WS" required="required"><br>
+                <input type="text" name="Rain" placeholder="Enter Rain" required="required"><br>
+                <input type="text" name="FFMC" placeholder="Enter FFMC" required="required"><br>
+                <input type="text" name="DMC" placeholder="Enter DMC" required="required"><br>
+                <input type="text" name="ISI" placeholder="Enter ISI" required="required"><br>
+                <input type="text" name="Classes" placeholder="Enter Classes" required="required"><br>
+                <input type="text" name="Region" placeholder="Enter Region" required="required"><br>
+                <button type="submit">Predict</button>
+            </form>
+
+            <h2> The Predicted FWI is {{results}}</h2>
+    </body>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .container {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        max-width: 500px;
+        width: 100%;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+    
+    input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+    }
+    
+    input:focus {
+        outline: none;
+        border-color: #667eea;
+    }
+    
+    button {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+    
+    button:hover {
+        transform: scale(1.02);
+    }
+    
+    h2 {
+        text-align: center;
+        color: #667eea;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+</style>
+</html>
